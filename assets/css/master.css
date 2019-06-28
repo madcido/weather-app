@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: Ubuntu, arial;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.display {
+  position: relative;
+  margin: 30px;
+  width: 300px;
+  border: 5px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 0 1px white, 0 0 4px black, 0 0 0 1px white inset;
+  background: inherit;
+  overflow: hidden;
+  color: white;
+}
+
+.display::before {
+ content: "";
+ position: absolute;
+ left: -10px;
+ right: -10px;
+ top: -10px;
+ bottom: -10px;
+ background: inherit;
+ box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.3);
+ filter: blur(10px);
+}
+
+#clock {
+  font-size: 14px;
+}
+
+.head {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  text-align: center;
+}
+
+.head:only-child {
+  padding-bottom: 25px;
+}
+
+.head p {
+  margin: 0;
+  padding: 0;
+  margin-left: 40px;
+  font-size: 24px;
+}
+
+.head i {
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.main img {
+  filter: brightness(0) invert(1);
+  margin: 0 20px 0 30px;
+}
+
+.main p {
+  margin: 0;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.main span {
+  font-size: 28px;
+}
+
+.main .small-temp {
+  position: absolute;
+  right: 40px;
+  font-size: 14px;
+  cursor: auto;
+}
+
+.main .small-temp span {
+  font-size: 10px;
+}
+
+.main .small-temp:first-of-type {
+  top: 25px;
+}
+
+.main .small-temp:last-of-type {
+  bottom: 25px;
+}
+
+.info {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 25px;
+  margin: 0 20px;
+}
+
+.info div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info p {
+  font-size: 14px;
+  margin: 0;
+  padding-top: 14px;
+}
+
+.swal2-input {
+  color: silver !important;
+  border-color: rgba(0, 0, 0, 0.3) !important;
+}
