@@ -8,7 +8,7 @@ function getForecastForm() {
         confirmButtonColor: 'rgba(0, 0, 0, 0.3)',
         showLoaderOnConfirm: true,
         preConfirm: (local) => {
-          return fetch("http://api.openweathermap.org/data/2.5/weather?q=" + local + "&APPID=94723f4f0546094811cad5269a872470", { mode: "cors" })
+          return fetch("https://api.openweathermap.org/data/2.5/weather?q=" + local + "&APPID=94723f4f0546094811cad5269a872470", { mode: "cors" })
             .then((response) => {
               if (!response.ok) {
                 return showMessage("Something went wrong");
