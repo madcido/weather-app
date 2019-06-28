@@ -17,10 +17,7 @@ function showTime(timezone) {
 }
 
 function formatHour(hour) {
-  let formatH;
-  formatH = (hour < 0) ? hour + 24 : hour;
-  formatH = (hour > 23) ? hour - 24 : hour;
-  return formatH;
+  return (hour < 0) ? hour + 24 : (hour > 23) ? hour - 24 : hour;
 }
 
 function getBackground(code, timeDiff) {
