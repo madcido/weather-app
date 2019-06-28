@@ -4,4 +4,4 @@ Assignment: https://www.theodinproject.com/courses/javascript/lessons/weather-ap
 
 Authors: <a href="https://github.com/madcido">Fabio Carmo</a>
 
-Preview: https://raw.githack.com/madcido/weather-app/dev/index.html
+Preview: https://madcido.github.io/weather-app/
