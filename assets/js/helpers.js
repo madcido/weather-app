@@ -1,8 +1,8 @@
-let time;
+let clock;
 
 function startTime(timezone) {
-  if (time) {clearInterval(time);}
-  time = setInterval(() => showTime(timezone), 1000);
+  if (clock) {clearInterval(clock);}
+  clock = setInterval(() => showTime(timezone), 1000);
 }
 
 function showTime(timezone) {
