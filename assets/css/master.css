@@ -13,8 +13,9 @@ body {
 }
 
 .display {
+  box-sizing: border-box;
   position: relative;
-  margin: 30px;
+  margin: 10px;
   width: 300px;
   border: 5px solid rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -42,9 +43,6 @@ body {
 
 .head {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding-top: 25px;
   text-align: center;
 }
@@ -56,30 +54,30 @@ body {
 .head p {
   margin: 0;
   padding: 0;
-  margin-left: 40px;
   font-size: 24px;
 }
 
 .head i {
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
-  margin-right: 40px;
+  margin: 4px;
 }
 
 .main {
   position: relative;
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  margin: 10px 0;
+  margin: 8px 0;
 }
 
 .main img {
   filter: brightness(0) invert(1);
-  margin: 0 20px 0 30px;
 }
 
 .main p {
   margin: 0;
+  margin-right: 25px;
   font-size: 40px;
   cursor: pointer;
 }
@@ -91,6 +89,7 @@ body {
 .main .small-temp {
   position: absolute;
   right: 40px;
+  margin: 0;
   font-size: 14px;
   cursor: auto;
 }
@@ -100,11 +99,11 @@ body {
 }
 
 .main .small-temp:first-of-type {
-  top: 25px;
+  top: 17px;
 }
 
 .main .small-temp:last-of-type {
-  bottom: 25px;
+  bottom: 13px;
 }
 
 .info {

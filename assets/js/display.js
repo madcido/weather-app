@@ -1,21 +1,18 @@
 function showForecast(forecast) {
   document.querySelector("body").style.backgroundImage = getBackground(forecast.weather[0].id, forecast.timezone/3600);
 
-  const local = document.createElement("p");
-  local.innerHTML = forecast.name + ", " + forecast.sys.country;
-  const clock = document.createElement("p");
-  clock.id = "clock";
-  const title = document.createElement("div");
-  title.appendChild(local);
-  title.appendChild(clock);
   const search = document.createElement("i");
   search.className = "search fas fa-search";
   search.addEventListener("click", getForecastForm);
-
+  const local = document.createElement("p");
+  local.innerHTML = forecast.name + ", " + forecast.sys.country + " • ";
+  local.appendChild(search);
+  const clock = document.createElement("p");
+  clock.id = "clock";
   const head = document.createElement("div");
   head.className = "head";
-  head.appendChild(title);
-  head.appendChild(search);
+  head.appendChild(local);
+  head.appendChild(clock);
 
   const maxTemp = document.createElement("p");
   maxTemp.innerHTML = tempScale(forecast.main.temp_max) + "<span>°C</span>";
@@ -89,16 +86,16 @@ function showForecast(forecast) {
 function showMessage(msg) {
   document.querySelector("body").style.backgroundImage = 'url("./assets/images/default.jpg")';
 
-  const message = document.createElement("p");
-  message.innerHTML = msg;
   const search = document.createElement("i");
   search.className = "search fas fa-search";
   search.addEventListener("click", getForecastForm);
+  const message = document.createElement("p");
+  message.innerHTML = msg + " • ";
+  message.appendChild(search);
 
   const head = document.createElement("div");
   head.className = "head";
   head.appendChild(message);
-  head.appendChild(search);
 
   const display = document.querySelector(".display");
   while (display.firstChild) {
